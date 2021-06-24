@@ -25,4 +25,4 @@ El acceso a los servicios vendrá a través de las siguientes urls:
 	http://localhost:8080/api/gestiontweets.Tweets              (Get)
 	http://localhost:8080/api/gestiontweets.ValidarTweet/200    (Post) --> Cambiar el valor (200) por el id del tweet. Es un id secuencial, no el id real del tweet. Está hecho así para facilitar el uso del api rest en las pruebas
 	http://localhost:8080/api/gestiontweets.TweetsValidos       (Get)
-	http://localhost:8080/api/gestiontweets.TweetsMasUsados     (Post) --> Poner content-type = application/json. Requiere un parámetro en el body: {"maxHashtags":<num_máximo>}  ; donde <num_máximo> es el número máximo de hashtags que se devuelven. Si no se especifica (null), se toma el valor indicado en el fichero de configuración
+	http://localhost:8080/api/gestiontweets.HashtagsMasUsados   (Post) --> Poner content-type = application/json. Requiere un parámetro en el body: {"maxHashtags":<num_máximo>}  ; donde <num_máximo> es el número máximo de hashtags que se devuelven. Si no se especifica (null), se toma el valor indicado en el fichero de configuración
