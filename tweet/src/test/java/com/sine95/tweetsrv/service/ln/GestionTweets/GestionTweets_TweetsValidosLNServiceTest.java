@@ -54,9 +54,9 @@ import com.sine95.tweetsrv.domain.In_GestionTweets_TweetsMasUsados;
     
 
 
-////START_{Import}
+
 import com.sine95.tweetsrv.enums.SiNo;
-////END_{Import}
+
 
 /**
 * Logica de negocio para los tweets
@@ -68,11 +68,11 @@ import com.sine95.tweetsrv.enums.SiNo;
 public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNServiceTest
 {
 
-////START_{AutoWired}
-////END_{AutoWired}
 
-////START_{Init}
-////END_{Init}
+
+
+
+
 
     
 	// Inicio tests metodo TweetsValidos()
@@ -110,7 +110,7 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 			Result< List <Tweets> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestTweetsValidos_DevuelveUnaListaParcial(ctx);
-			////START_{testTweetsValidos_DevuelveUnaListaParcial}
+			
 			res=serviceLN.TweetsValidos(  ); 
 			//Comprobacion todo correcto
 			if(res.isOk()){
@@ -124,7 +124,7 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 
 			
 
-			////END_{testTweetsValidos_DevuelveUnaListaParcial}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -165,7 +165,7 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 	*/
 	public Map<String,Object> preTestTweetsValidos_DevuelveUnaListaParcial(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestTweetsValidos_DevuelveUnaListaParcial}
+		
 		File resource = getFileResourceOfClassMethod(this.getClass(),"DevuelveUnaListaParcial","json");// buca el recurso en el mismo path que la clase, con el nombre <nombreClase>_DevuelveUnaListaParcial.json
 		if(!resource.exists())
 		{
@@ -178,7 +178,7 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 			inyectaUsuarioYRolesEnSesion("admin",new String[] {"ADMIN","USER"}); // esta linea si se necesita el usuario en sesion
 			ctx.put("fichero", resource); // pasar el fichero a la parte de post
 		}
-		////END_{preTestTweetsValidos_DevuelveUnaListaParcial}
+		
 		return ctx;
 	}
 	/*
@@ -210,7 +210,7 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 	{
 		try {
 		
-		////START_{postTestTweetsValidos_DevuelveUnaListaParcial}
+		
 			File resource=(File) ctx.get("fichero"); //obtiene el recurso empleado en el preTest
 			if(resource!=null )
 			{
@@ -222,7 +222,7 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 					fail("Fichero de recursos "+resource.getAbsolutePath()+" no encontrado");//si no lo encuentra esta mal el test
 				}
 			}
-		////END_{postTestTweetsValidos_DevuelveUnaListaParcial}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -236,12 +236,12 @@ public class GestionTweets_TweetsValidosLNServiceTest extends GestionTweetsLNSer
 
 	// Fin tests metodo TweetsValidos()
 
-////START_{Others}
-////END_{Others}
+
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }
 

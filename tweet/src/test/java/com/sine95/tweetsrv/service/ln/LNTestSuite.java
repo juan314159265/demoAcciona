@@ -29,5 +29,4 @@ import com.sine95.tweetsrv.service.ln.GestionTweets.GestionTweets_HashtagsMasUsa
 public class LNTestSuite {
 
 }
-// HASTA AQUI TPL: JavaTestSuite
 

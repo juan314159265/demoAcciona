@@ -54,8 +54,8 @@ import com.sine95.tweetsrv.domain.In_GestionTweets_TweetsMasUsados;
     
 
 
-////START_{Import}
-////END_{Import}
+
+
 
 /**
 * Logica de negocio para los tweets
@@ -67,11 +67,11 @@ import com.sine95.tweetsrv.domain.In_GestionTweets_TweetsMasUsados;
 public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsLNServiceTest
 {
 
-////START_{AutoWired}
-////END_{AutoWired}
 
-////START_{Init}
-////END_{Init}
+
+
+
+
 
     
 	// Inicio tests metodo HashtagsMasUsados(info)
@@ -109,7 +109,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			Result< List <Hashtags> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestHashtagsMasUsados_DevuelveListaVacia(ctx);
-			////START_{testHashtagsMasUsados_DevuelveListaVacia}
+			
 			In_GestionTweets_TweetsMasUsados info = new In_GestionTweets_TweetsMasUsados() ;
 
 			res=serviceLN.HashtagsMasUsados( info ); 
@@ -122,7 +122,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			}
 
 
-			////END_{testHashtagsMasUsados_DevuelveListaVacia}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -163,7 +163,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	*/
 	public Map<String,Object> preTestHashtagsMasUsados_DevuelveListaVacia(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestHashtagsMasUsados_DevuelveListaVacia}
+		
 		File resource = getFileResourceOfClassMethod(this.getClass(),"DevuelveListaVacia","json");// buca el recurso en el mismo path que la clase, con el nombre <nombreClase>_DevuelveListaVacia.json
 		if(!resource.exists())
 		{
@@ -176,7 +176,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			inyectaUsuarioYRolesEnSesion("admin",new String[] {"ADMIN","USER"}); // esta linea si se necesita el usuario en sesion
 			ctx.put("fichero", resource); // pasar el fichero a la parte de post
 		}
-		////END_{preTestHashtagsMasUsados_DevuelveListaVacia}
+		
 		return ctx;
 	}
 	/*
@@ -208,7 +208,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	{
 		try {
 		
-		////START_{postTestHashtagsMasUsados_DevuelveListaVacia}
+		
 			File resource=(File) ctx.get("fichero"); //obtiene el recurso empleado en el preTest
 			if(resource!=null )
 			{
@@ -220,7 +220,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 					fail("Fichero de recursos "+resource.getAbsolutePath()+" no encontrado");//si no lo encuentra esta mal el test
 				}
 			}
-		////END_{postTestHashtagsMasUsados_DevuelveListaVacia}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -262,7 +262,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			Result< List <Hashtags> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestHashtagsMasUsados_Devuelve1(ctx);
-			////START_{testHashtagsMasUsados_Devuelve1}
+			
 			In_GestionTweets_TweetsMasUsados info = new In_GestionTweets_TweetsMasUsados() ;
 
 			res=serviceLN.HashtagsMasUsados( info ); 
@@ -276,7 +276,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 				fail("El res no es válido");
 			}
 
-			////END_{testHashtagsMasUsados_Devuelve1}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -317,7 +317,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	*/
 	public Map<String,Object> preTestHashtagsMasUsados_Devuelve1(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestHashtagsMasUsados_Devuelve1}
+		
 		File resource = getFileResourceOfClassMethod(this.getClass(),"Devuelve1","json");// buca el recurso en el mismo path que la clase, con el nombre <nombreClase>_Devuelve1.json
 		if(!resource.exists())
 		{
@@ -330,7 +330,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			inyectaUsuarioYRolesEnSesion("admin",new String[] {"ADMIN","USER"}); // esta linea si se necesita el usuario en sesion
 			ctx.put("fichero", resource); // pasar el fichero a la parte de post
 		}
-		////END_{preTestHashtagsMasUsados_Devuelve1}
+		
 		return ctx;
 	}
 	/*
@@ -362,7 +362,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	{
 		try {
 		
-		////START_{postTestHashtagsMasUsados_Devuelve1}
+		
 			File resource=(File) ctx.get("fichero"); //obtiene el recurso empleado en el preTest
 			if(resource!=null )
 			{
@@ -374,7 +374,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 					fail("Fichero de recursos "+resource.getAbsolutePath()+" no encontrado");//si no lo encuentra esta mal el test
 				}
 			}
-		////END_{postTestHashtagsMasUsados_Devuelve1}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -416,7 +416,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			Result< List <Hashtags> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestHashtagsMasUsados_DevuelveMaxParametro(ctx);
-			////START_{testHashtagsMasUsados_DevuelveMaxParametro}
+			
 			In_GestionTweets_TweetsMasUsados info = new In_GestionTweets_TweetsMasUsados(3) ;
 
 			res=serviceLN.HashtagsMasUsados( info ); 
@@ -431,7 +431,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 				fail("El res no es válido");
 			}
 
-			////END_{testHashtagsMasUsados_DevuelveMaxParametro}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -472,7 +472,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	*/
 	public Map<String,Object> preTestHashtagsMasUsados_DevuelveMaxParametro(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestHashtagsMasUsados_DevuelveMaxParametro}
+		
 		File resource = getFileResourceOfClassMethod(this.getClass(),"DevuelveMaxParametro","json");// buca el recurso en el mismo path que la clase, con el nombre <nombreClase>_DevuelveMaxParametro.json
 		if(!resource.exists())
 		{
@@ -485,7 +485,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			inyectaUsuarioYRolesEnSesion("admin",new String[] {"ADMIN","USER"}); // esta linea si se necesita el usuario en sesion
 			ctx.put("fichero", resource); // pasar el fichero a la parte de post
 		}
-		////END_{preTestHashtagsMasUsados_DevuelveMaxParametro}
+		
 		return ctx;
 	}
 	/*
@@ -517,7 +517,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	{
 		try {
 		
-		////START_{postTestHashtagsMasUsados_DevuelveMaxParametro}
+		
 			File resource=(File) ctx.get("fichero"); //obtiene el recurso empleado en el preTest
 			if(resource!=null )
 			{
@@ -529,7 +529,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 					fail("Fichero de recursos "+resource.getAbsolutePath()+" no encontrado");//si no lo encuentra esta mal el test
 				}
 			}
-		////END_{postTestHashtagsMasUsados_DevuelveMaxParametro}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -571,7 +571,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			Result< List <Hashtags> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestHashtagsMasUsados_DevuelveMaxSinParametro(ctx);
-			////START_{testHashtagsMasUsados_DevuelveMaxSinParametro}
+			
 			In_GestionTweets_TweetsMasUsados info = new In_GestionTweets_TweetsMasUsados() ;
 
 			res=serviceLN.HashtagsMasUsados( info ); 
@@ -585,7 +585,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 				fail("El res no es válido");
 			}
 
-			////END_{testHashtagsMasUsados_DevuelveMaxSinParametro}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -626,7 +626,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	*/
 	public Map<String,Object> preTestHashtagsMasUsados_DevuelveMaxSinParametro(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestHashtagsMasUsados_DevuelveMaxSinParametro}
+		
 		File resource = getFileResourceOfClassMethod(this.getClass(),"DevuelveMaxSinParametro","json");// buca el recurso en el mismo path que la clase, con el nombre <nombreClase>_DevuelveMaxSinParametro.json
 		if(!resource.exists())
 		{
@@ -639,7 +639,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 			inyectaUsuarioYRolesEnSesion("admin",new String[] {"ADMIN","USER"}); // esta linea si se necesita el usuario en sesion
 			ctx.put("fichero", resource); // pasar el fichero a la parte de post
 		}
-		////END_{preTestHashtagsMasUsados_DevuelveMaxSinParametro}
+		
 		return ctx;
 	}
 	/*
@@ -671,7 +671,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 	{
 		try {
 		
-		////START_{postTestHashtagsMasUsados_DevuelveMaxSinParametro}
+		
 			File resource=(File) ctx.get("fichero"); //obtiene el recurso empleado en el preTest
 			if(resource!=null )
 			{
@@ -683,7 +683,7 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 					fail("Fichero de recursos "+resource.getAbsolutePath()+" no encontrado");//si no lo encuentra esta mal el test
 				}
 			}
-		////END_{postTestHashtagsMasUsados_DevuelveMaxSinParametro}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -697,12 +697,12 @@ public class GestionTweets_HashtagsMasUsadosLNServiceTest extends GestionTweetsL
 
 	// Fin tests metodo HashtagsMasUsados(info)
 
-////START_{Others}
-////END_{Others}
+
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }
 

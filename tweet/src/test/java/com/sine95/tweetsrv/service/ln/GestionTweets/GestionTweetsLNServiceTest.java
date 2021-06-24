@@ -56,8 +56,8 @@ import com.sine95.tweetsrv.domain.In_GestionTweets_TweetsMasUsados;
 
 import com.sine95.tweetsrv.service.ln.GestionTweetsLNService;
 
-////START_{Import}
-////END_{Import}
+
+
 
 /**
 * Logica de negocio para los tweets
@@ -69,8 +69,8 @@ import com.sine95.tweetsrv.service.ln.GestionTweetsLNService;
 @Transactional
 public class GestionTweetsLNServiceTest extends BaseTest
 {
-////START_{AutoWired}
-////END_{AutoWired}
+
+
 
     @Autowired
     protected  Config config;
@@ -96,15 +96,15 @@ public class GestionTweetsLNServiceTest extends BaseTest
 
     @Before
     public void init(){
-      ////START_{Init}
-      ////END_{Init}
+      
+      
     }
 
-////START_{Others}
-////END_{Others}
+
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }

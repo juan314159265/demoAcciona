@@ -57,8 +57,8 @@ import com.sine95.tweetsrv.enums.SiNo;
 
 import com.sine95.tweetsrv.service.ln.ClienteTwitterLNService;
 
-////START_{Import}
-////END_{Import}
+
+
 
 /**
 * Logica de negocio para el acceso a Twitter
@@ -70,8 +70,8 @@ import com.sine95.tweetsrv.service.ln.ClienteTwitterLNService;
 @Transactional
 public class ClienteTwitterLNServiceTest extends BaseTest
 {
-////START_{AutoWired}
-////END_{AutoWired}
+
+
 
     @Autowired
     protected  Config config;
@@ -97,15 +97,15 @@ public class ClienteTwitterLNServiceTest extends BaseTest
 
     @Before
     public void init(){
-      ////START_{Init}
-      ////END_{Init}
+      
+      
     }
 
-////START_{Others}
-////END_{Others}
+
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }

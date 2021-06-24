@@ -46,8 +46,8 @@ import com.sine95.tweetsrv.service.ln.GestionHilosLNService;
 
 import com.sine95.tweetsrv.service.task.TareaTaskService;
 
-////START_{Import}
-////END_{Import}
+
+
 
 /**
 * Logica de negocio para las tareas automáticas
@@ -59,8 +59,8 @@ import com.sine95.tweetsrv.service.task.TareaTaskService;
 @Transactional
 public class TareaTaskServiceTest extends BaseTest
 {
-////START_{AutoWired}
-////END_{AutoWired}
+
+
 
     @Autowired
     protected  Config config;
@@ -92,16 +92,16 @@ public class TareaTaskServiceTest extends BaseTest
 
     @Before
     public void init(){
-      ////START_{Init}
-      ////END_{Init}
+      
+      
     }
 
-////START_{Others}
+
 //Si hay que annadir metodos se incluyen aqui, se recomienda utilizar este tipo de comentario para no interferir con el DELETE
-////END_{Others}
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }

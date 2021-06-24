@@ -55,8 +55,8 @@ import com.sine95.tweetsrv.enums.SiNo;
     
 
 
-////START_{Import}
-////END_{Import}
+
+
 
 /**
 * Logica de negocio para el acceso a Twitter
@@ -68,11 +68,11 @@ import com.sine95.tweetsrv.enums.SiNo;
 public class ClienteTwitter_SendTwitLNServiceTest extends ClienteTwitterLNServiceTest
 {
 
-////START_{AutoWired}
-////END_{AutoWired}
 
-////START_{Init}
-////END_{Init}
+
+
+
+
 
     
 	// Inicio tests metodo SendTwit(texto)
@@ -110,7 +110,7 @@ public class ClienteTwitter_SendTwitLNServiceTest extends ClienteTwitterLNServic
 			Result< Vacio > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestSendTwit_porHacer(ctx);
-			////START_{testSendTwit_porHacer}
+			
 			throw new UnsupportedOperationException();
 
 
@@ -133,7 +133,7 @@ public class ClienteTwitter_SendTwitLNServiceTest extends ClienteTwitterLNServic
 			//	assertEquals("Deberia dar un error de tipo <TipoError>",1,UtilError.findErrorByType(res.getErrores(), <TipoError>.class).size());
 			//}
 
-			////END_{testSendTwit_porHacer}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -174,9 +174,9 @@ public class ClienteTwitter_SendTwitLNServiceTest extends ClienteTwitterLNServic
 	*/
 	public Map<String,Object> preTestSendTwit_porHacer(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestSendTwit_porHacer}
+		
 		//Inserciones en BBDD o similares para probar el metodo
-		////END_{preTestSendTwit_porHacer}
+		
 		return ctx;
 	}
 	/*
@@ -208,9 +208,9 @@ public class ClienteTwitter_SendTwitLNServiceTest extends ClienteTwitterLNServic
 	{
 		try {
 		
-		////START_{postTestSendTwit_porHacer}
+		
 		//Limpiar lo generado en pre o en el metodo
-		////END_{postTestSendTwit_porHacer}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -224,12 +224,12 @@ public class ClienteTwitter_SendTwitLNServiceTest extends ClienteTwitterLNServic
 
 	// Fin tests metodo SendTwit(texto)
 
-////START_{Others}
-////END_{Others}
+
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }
 

@@ -25,8 +25,8 @@ import org.springframework.context.ApplicationContext;
 
 
 
-////START_{Import}
-////END_{Import}
+
+
 
 /**
 * L?gica de negocio asociada a Formulario
@@ -38,8 +38,8 @@ import org.springframework.context.ApplicationContext;
 @Transactional
 public class SecurityGroupCRUDServiceTest
 {
-////START_{AutoWired}
-////END_{AutoWired}
+
+
 
     @Autowired
     protected  Config config;
@@ -54,8 +54,8 @@ public class SecurityGroupCRUDServiceTest
 
     @Before
     public void init(){
-      ////START_{Init}
-      ////END_{Init}
+      
+      
     }
     
 	/**
@@ -94,7 +94,7 @@ public class SecurityGroupCRUDServiceTest
 			Result< Set <String> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestFindAllAutorized_buscarNormal(ctx);
-			////START_{testFindAllAutorized_buscarNormal}
+			
 			throw new UnsupportedOperationException();
 
 
@@ -108,7 +108,7 @@ public class SecurityGroupCRUDServiceTest
 			//	fail("El res no es válido");
 			//}
 
-			////END_{testFindAllAutorized_buscarNormal}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -149,9 +149,9 @@ public class SecurityGroupCRUDServiceTest
 	*/
 	public Map<String,Object> preTestFindAllAutorized_buscarNormal(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestFindAllAutorized_buscarNormal}
+		
 		//Inserciones en BBDD o similares para probar el metodo
-		////END_{preTestFindAllAutorized_buscarNormal}
+		
 		return ctx;
 	}
 	/*
@@ -183,9 +183,9 @@ public class SecurityGroupCRUDServiceTest
 	{
 		try {
 		
-		////START_{postTestFindAllAutorized_buscarNormal}
+		
 		//Limpiar lo generado en pre o en el metodo
-		////END_{postTestFindAllAutorized_buscarNormal}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -227,7 +227,7 @@ public class SecurityGroupCRUDServiceTest
 			Result< Set <String> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestFindAllAutorized_soloPublic(ctx);
-			////START_{testFindAllAutorized_soloPublic}
+			
 			throw new UnsupportedOperationException();
 
 
@@ -241,7 +241,7 @@ public class SecurityGroupCRUDServiceTest
 			//	fail("El res no es válido");
 			//}
 
-			////END_{testFindAllAutorized_soloPublic}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -282,9 +282,9 @@ public class SecurityGroupCRUDServiceTest
 	*/
 	public Map<String,Object> preTestFindAllAutorized_soloPublic(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestFindAllAutorized_soloPublic}
+		
 		//Inserciones en BBDD o similares para probar el metodo
-		////END_{preTestFindAllAutorized_soloPublic}
+		
 		return ctx;
 	}
 	/*
@@ -316,9 +316,9 @@ public class SecurityGroupCRUDServiceTest
 	{
 		try {
 		
-		////START_{postTestFindAllAutorized_soloPublic}
+		
 		//Limpiar lo generado en pre o en el metodo
-		////END_{postTestFindAllAutorized_soloPublic}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -367,7 +367,7 @@ public class SecurityGroupCRUDServiceTest
 			Result< Map <String,Set<String>> > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestFindAllRestAuthorized_buscarNormal(ctx);
-			////START_{testFindAllRestAuthorized_buscarNormal}
+			
 			throw new UnsupportedOperationException();
 
 
@@ -379,7 +379,7 @@ public class SecurityGroupCRUDServiceTest
 			//	fail("El res no es válido");
 			//}
 
-			////END_{testFindAllRestAuthorized_buscarNormal}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -420,9 +420,9 @@ public class SecurityGroupCRUDServiceTest
 	*/
 	public Map<String,Object> preTestFindAllRestAuthorized_buscarNormal(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestFindAllRestAuthorized_buscarNormal}
+		
 		//Inserciones en BBDD o similares para probar el metodo
-		////END_{preTestFindAllRestAuthorized_buscarNormal}
+		
 		return ctx;
 	}
 	/*
@@ -454,9 +454,9 @@ public class SecurityGroupCRUDServiceTest
 	{
 		try {
 		
-		////START_{postTestFindAllRestAuthorized_buscarNormal}
+		
 		//Limpiar lo generado en pre o en el metodo
-		////END_{postTestFindAllRestAuthorized_buscarNormal}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -470,12 +470,12 @@ public class SecurityGroupCRUDServiceTest
 
     
 
-////START_{Others}
+
 //Si hay que aï¿½adir mï¿½todos se incluyen aquï¿½, se recomienda utilizar este tipo de comentario para no interferir con el DELETE
-////END_{Others}
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }

@@ -54,9 +54,9 @@ import com.sine95.tweetsrv.domain.In_GestionTweets_TweetsMasUsados;
     
 
 
-////START_{Import}
+
 import com.sine95.tweetsrv.enums.SiNo;
-////END_{Import}
+
 
 /**
 * Logica de negocio para los tweets
@@ -68,11 +68,11 @@ import com.sine95.tweetsrv.enums.SiNo;
 public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServiceTest
 {
 
-////START_{AutoWired}
-////END_{AutoWired}
 
-////START_{Init}
-////END_{Init}
+
+
+
+
 
     
 	// Inicio tests metodo ValidarTweet(tweetid)
@@ -110,7 +110,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 			Result< Vacio > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestValidarTweet_ComprobarTweetValido(ctx);
-			////START_{testValidarTweet_ComprobarTweetValido}
+			
 			Long tweetid = 1L ;
 
 			res=serviceLN.ValidarTweet( tweetid ); 
@@ -133,7 +133,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 			//	assertEquals("Deberia dar un error de tipo <TipoError>",1,UtilError.findErrorByType(res.getErrores(), <TipoError>.class).size());
 			//}
 
-			////END_{testValidarTweet_ComprobarTweetValido}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -174,7 +174,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 	*/
 	public Map<String,Object> preTestValidarTweet_ComprobarTweetValido(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestValidarTweet_ComprobarTweetValido}
+		
 		File resource = getFileResourceOfClassMethod(this.getClass(),"ComprobarTweetValido","json");// buca el recurso en el mismo path que la clase, con el nombre <nombreClase>_ComprobarTweetValido.json
 		if(!resource.exists())
 		{
@@ -187,7 +187,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 			inyectaUsuarioYRolesEnSesion("admin",new String[] {"ADMIN","USER"}); // esta linea si se necesita el usuario en sesion
 			ctx.put("fichero", resource); // pasar el fichero a la parte de post
 		}
-		////END_{preTestValidarTweet_ComprobarTweetValido}
+		
 		return ctx;
 	}
 	/*
@@ -219,7 +219,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 	{
 		try {
 		
-		////START_{postTestValidarTweet_ComprobarTweetValido}
+		
 			File resource=(File) ctx.get("fichero"); //obtiene el recurso empleado en el preTest
 			if(resource!=null )
 			{
@@ -231,7 +231,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 					fail("Fichero de recursos "+resource.getAbsolutePath()+" no encontrado");//si no lo encuentra esta mal el test
 				}
 			}
-		////END_{postTestValidarTweet_ComprobarTweetValido}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -273,7 +273,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 			Result< Vacio > res = new Result<>();
 			Contexto con=Contexto.init();
 			this.preTestValidarTweet_ErrorIdNoEncontrado(ctx);
-			////START_{testValidarTweet_ErrorIdNoEncontrado}
+			
 			Long tweetid = 1L ;
 
 			res=serviceLN.ValidarTweet( tweetid ); 
@@ -287,7 +287,7 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 				assertEquals("Deberia dar un error de tipo ErrorIdNoEncontrado",1,UtilError.findErrorByType(res.getErrores(), ErrorIdNoEncontrado.class).size());
 			}
 
-			////END_{testValidarTweet_ErrorIdNoEncontrado}
+			
 		}
 		catch(AssertionError e)
 		{
@@ -328,9 +328,9 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 	*/
 	public Map<String,Object> preTestValidarTweet_ErrorIdNoEncontrado(Map<String,Object> ctx) throws Throwable
 	{
-		////START_{preTestValidarTweet_ErrorIdNoEncontrado}
+		
 		//Inserciones en BBDD o similares para probar el metodo
-		////END_{preTestValidarTweet_ErrorIdNoEncontrado}
+		
 		return ctx;
 	}
 	/*
@@ -362,9 +362,9 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 	{
 		try {
 		
-		////START_{postTestValidarTweet_ErrorIdNoEncontrado}
+		
 		//Limpiar lo generado en pre o en el metodo
-		////END_{postTestValidarTweet_ErrorIdNoEncontrado}
+		
 		Contexto.close();
 		ctx.clear();
 		} catch (Throwable e) {	
@@ -378,12 +378,12 @@ public class GestionTweets_ValidarTweetLNServiceTest extends GestionTweetsLNServ
 
 	// Fin tests metodo ValidarTweet(tweetid)
 
-////START_{Others}
-////END_{Others}
+
+
 
 /*
-////DELETE_START
-////DELETE_END
+
+
 */
 }
 
