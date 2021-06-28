@@ -82,10 +82,10 @@ public class ProcessTwiter implements StatusListener {
 	// Listener method
 	@Override
 	public void onStatus(Status status) {
-		log.info("Received Tweeter Status:" + status.toString());
+		log.debug("Received Tweeter Status:" + status.toString());
 		if (status.getUser().getFollowersCount() >= config.getNumUsersMinToPersist()) {
 			if (config.getLanguagesToPersist().contains(status.getLang())) {
-				log.info("Insert Tweeter Status:" + status.toString());
+				log.debug("Insert Tweeter Status:" + status.toString());
 				DefaultTransactionDefinition definition = new DefaultTransactionDefinition();
 				TransactionStatus transaction = transactionManager.getTransaction(definition);
 				try {
@@ -98,7 +98,7 @@ public class ProcessTwiter implements StatusListener {
 					transactionManager.rollback(transaction);
 					log.error("Error Insert Tweet:" + t.toString());
 				}
-				log.info("End Tweeter Status:" + status.toString());
+				log.debug("End Tweeter Status:" + status.toString());
 			}
 		}
 	}
@@ -134,7 +134,7 @@ public class ProcessTwiter implements StatusListener {
 	}
 
 	private Tweet insertTweetFromStatus(Status status) {
-		log.info("Start TweetsService.insertTweetFromStatus => status=" + status.toString());
+		log.debug("Start TweetsService.insertTweetFromStatus => status=" + status.toString());
 		Tweet tweet = new Tweet();
 
 		tweet.setTexto(status.getText());
@@ -146,12 +146,12 @@ public class ProcessTwiter implements StatusListener {
 			tweet.setLocalizacionLongitud(Double.toString(geoLocation.getLongitude()));
 		}
 		Tweet res = tweetRepository.save(tweet);
-		log.info("End TweetsService.insertTweetFromStatus => status=" + status.toString() + " res:" + res.toString());
+		log.debug("End TweetsService.insertTweetFromStatus => status=" + status.toString() + " res:" + res.toString());
 		return res;
 	}
 
 	private void insertHashtagsFromStatus(Status status) {
-		log.info("Start HashtagsService.insertHashtags => status=" + status.toString());
+		log.debug("Start HashtagsService.insertHashtags => status=" + status.toString());
 		HashtagEntity[] entities = status.getHashtagEntities();
 		for (HashtagEntity hashtag : entities) {
 			Example<Hashtags> exHashtag = Example.of(new Hashtags().setHashtag(hashtag.getText()));
@@ -166,7 +166,7 @@ public class ProcessTwiter implements StatusListener {
 				hashtagsRepository.save(hashtags);
 			}
 		}
-		log.info("End HashtagsService.insertHashtags => status=" + status.toString());
+		log.debug("End HashtagsService.insertHashtags => status=" + status.toString());
 
 	}
 }
