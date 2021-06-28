@@ -1,0 +1,21 @@
+server.port: 8080
+spring:
+    datasource:
+        name:
+        password: sa
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:hsqldb:mem:myDb
+        username: sa
+    devtools:
+        livereload:
+            enabled: true 
+        restart: 
+            enabled: true
+    profiles:
+        active: dev
+oauth:
+    consumerKey: srzWFhTOz5gMxPPi1B8uQXcFT
+    consumerSecret: jiYKkyqD1LXdkPChRMkvFpi1gcA272bVoJebKREEQdOoV9mTOs
+    accessToken: 704825310-NrrgU2Cu4G8Amq24gcYhYzOdgEzO8xxsnEdpij5A
+    accessTokenSecret: bGAAHtES29SibgkQdQIJBVASUXEfJtRxibZyCbTOjkH2K
+        
